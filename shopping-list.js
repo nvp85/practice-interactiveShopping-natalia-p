@@ -8,14 +8,14 @@ addButton.addEventListener("click", function() {
     list.appendChild(newElement);
 
     const removeButton = document.createElement("button");
-    removeButton.textContent = "remove"
+    removeButton.textContent = "remove";
     newElement.appendChild(removeButton);
     removeButton.addEventListener("click", function() {
         list.removeChild(newElement);
     });
-
+    // closures seem iffy. not sure if it's ok
     const editButton = document.createElement("button");
-    editButton.textContent = "edit"
+    editButton.textContent = "edit";
     newElement.appendChild(editButton);
     editButton.addEventListener("click", function() {
         const editInput = document.createElement("input");
