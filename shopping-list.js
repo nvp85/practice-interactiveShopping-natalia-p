@@ -18,13 +18,13 @@ function addListElement() {
     removeButton.textContent = "remove";
     removeButton.value = newElement.id; // each remove button will be connected to an element via its id
     newElement.appendChild(removeButton); // the remove button is added to the list item
-    removeButton.addEventListener("click", (event) => removeItem(event));
+    removeButton.addEventListener("click", removeItem);
     // create an edit button
     const editButton = document.createElement("button");
     editButton.textContent = "edit";
     editButton.value = newElement.id; // each edit button will be connected to an element via its id
     newElement.appendChild(editButton); // the edit button is added to the list item
-    editButton.addEventListener("click", (event) => editListItem(event));
+    editButton.addEventListener("click", editListItem);
 }
 
 function removeItem(event) {
