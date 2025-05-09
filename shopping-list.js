@@ -58,5 +58,5 @@ function editListItem(event) {
         item.childNodes[2].style.display = "inline"; 
         // remove the save button
         item.removeChild(saveButton); 
-    });
+    }, {once: true}); // automatically remove the event listener after using it once
 }
