@@ -29,7 +29,10 @@ function addListElement() {
 
 function removeItem(event) {
     const id = event.target.value; // the button has the items id
-    document.getElementById(id).remove(); // get the item by id and remove it
+    const item = document.getElementById(id);
+    item.children[0].removeEventListener("click", removeItem);
+    item.children[1].removeEventListener("click", editListItem);
+    item.remove(); // get the item by id and remove it
 }
 
 function editListItem(event) {
