@@ -9,6 +9,11 @@ addButton.addEventListener("click", addListElement);
 function addListElement() {
     // create a new list item
     const newElement = document.createElement("li");
+    if (inputField.value.trim() === "") {
+        // the field should not be empty
+        alert("Please enter some text. A list item can't be empty.");
+        return;
+    }
     newElement.textContent = inputField.value;
     newElement.id = itemsCounter; // each list element has a unique id
     itemsCounter++; 
